@@ -1,23 +1,4 @@
 {
-  "name": "shadcn-admin",
-  "private": false,
-  "version": "2.2.1",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "format:check": "prettier --check .",
-    "format": "prettier --write .",
-    "knip": "knip",
-    "test": "vitest run --browser.headless",
-    "test:watch": "vitest --browser.headless",
-    "test:ui": "vitest --ui --browser.headless",
-    "test:browser": "vitest",
-    "test:coverage": "vitest run --coverage --browser.headless",
-    "test:browser:install": "playwright install chromium --with-deps"
-  },
   "dependencies": {
     "@clerk/react": "^6.4.2",
     "@hookform/resolvers": "^5.2.2",
@@ -64,6 +45,7 @@
     "zustand": "^5.0.12"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.4.12",
     "@eslint/js": "^10.0.1",
     "@faker-js/faker": "^10.4.0",
     "@tanstack/eslint-plugin-query": "^5.99.0",
@@ -88,8 +70,30 @@
     "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.58.2",
+    "ultracite": "7.6.1",
     "vite": "^8.0.8",
     "vitest": "^4.1.4",
     "vitest-browser-react": "^2.2.0"
-  }
+  },
+  "name": "shadcn-admin",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "knip": "knip",
+    "test": "vitest run --browser.headless",
+    "test:watch": "vitest --browser.headless",
+    "test:ui": "vitest --ui --browser.headless",
+    "test:browser": "vitest",
+    "test:coverage": "vitest run --coverage --browser.headless",
+    "test:browser:install": "playwright install chromium --with-deps",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
+  },
+  "type": "module",
+  "version": "2.2.1",
+  "private": false
 }
