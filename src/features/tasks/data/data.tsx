@@ -1,77 +1,77 @@
 import {
+  AlertCircle,
   ArrowDown,
   ArrowRight,
   ArrowUp,
-  Circle,
   CheckCircle,
-  AlertCircle,
-  Timer,
-  HelpCircle,
+  Circle,
   CircleOff,
-} from 'lucide-react'
+  HelpCircle,
+  Timer,
+} from "lucide-react";
 
 export const labels = [
   {
-    value: 'bug',
-    label: 'Bug',
+    value: "bug",
+    label: "Bug",
   },
   {
-    value: 'feature',
-    label: 'Feature',
+    value: "feature",
+    label: "Feature",
   },
   {
-    value: 'documentation',
-    label: 'Documentation',
+    value: "documentation",
+    label: "Documentation",
   },
-]
+];
 
 export const statuses = [
   {
-    label: 'Backlog',
-    value: 'backlog' as const,
+    label: "Backlog",
+    value: "backlog" as const,
     icon: HelpCircle,
   },
   {
-    label: 'Todo',
-    value: 'todo' as const,
+    label: "Todo",
+    value: "todo" as const,
     icon: Circle,
   },
   {
-    label: 'In Progress',
-    value: 'in progress' as const,
+    label: "In Progress",
+    value: "in progress" as const,
     icon: Timer,
   },
   {
-    label: 'Done',
-    value: 'done' as const,
+    label: "Done",
+    value: "done" as const,
     icon: CheckCircle,
   },
   {
-    label: 'Canceled',
-    value: 'canceled' as const,
+    label: "Canceled",
+    value: "canceled" as const,
     icon: CircleOff,
   },
-]
+];
 
 export const priorities = [
   {
-    label: 'Low',
-    value: 'low' as const,
+    label: "Low",
+    value: "low" as const,
     icon: ArrowDown,
   },
   {
-    label: 'Medium',
-    value: 'medium' as const,
+    label: "Medium",
+    value: "medium" as const,
     icon: ArrowRight,
   },
   {
-    label: 'High',
-    value: 'high' as const,
+    label: "High",
+    value: "high" as const,
     icon: ArrowUp,
   },
   {
-    label: 'Critical',
-    value: 'critical' as const,
+    label: "Critical",
+    value: "critical" as const,
     icon: AlertCircle,
   },
-]
+];

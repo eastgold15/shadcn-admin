@@ -1,4 +1,4 @@
-import { Link } from '@tanstack/react-router'
+import { Link } from "@tanstack/react-router";
 import {
   Card,
   CardContent,
@@ -6,24 +6,24 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import { AuthLayout } from '../auth-layout'
-import { SignUpForm } from './components/sign-up-form'
+} from "@/components/ui/card";
+import { AuthLayout } from "../auth-layout";
+import { SignUpForm } from "./components/sign-up-form";
 
 export function SignUp() {
   return (
     <AuthLayout>
-      <Card className='max-w-sm gap-4'>
+      <Card className="max-w-sm gap-4">
         <CardHeader>
-          <CardTitle className='text-lg tracking-tight'>
+          <CardTitle className="text-lg tracking-tight">
             Create an account
           </CardTitle>
           <CardDescription>
             Enter your email and password to create an account. <br />
-            Already have an account?{' '}
+            Already have an account?{" "}
             <Link
-              to='/sign-in'
-              className='underline underline-offset-4 hover:text-primary'
+              className="underline underline-offset-4 hover:text-primary"
+              to="/sign-in"
             >
               Sign In
             </Link>
@@ -33,18 +33,18 @@ export function SignUp() {
           <SignUpForm />
         </CardContent>
         <CardFooter>
-          <p className='px-8 text-center text-sm text-muted-foreground'>
-            By creating an account, you agree to our{' '}
+          <p className="px-8 text-center text-muted-foreground text-sm">
+            By creating an account, you agree to our{" "}
             <a
-              href='/terms'
-              className='underline underline-offset-4 hover:text-primary'
+              className="underline underline-offset-4 hover:text-primary"
+              href="/terms"
             >
               Terms of Service
-            </a>{' '}
-            and{' '}
+            </a>{" "}
+            and{" "}
             <a
-              href='/privacy'
-              className='underline underline-offset-4 hover:text-primary'
+              className="underline underline-offset-4 hover:text-primary"
+              href="/privacy"
             >
               Privacy Policy
             </a>
@@ -53,5 +53,5 @@ export function SignUp() {
         </CardFooter>
       </Card>
     </AuthLayout>
-  )
+  );
 }

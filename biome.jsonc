@@ -4,5 +4,88 @@
     "ultracite/biome/remix",
     "ultracite/biome/vitest"
   ],
-  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json"
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "!node_modules",
+      "!.vercel",
+      "!dist",
+      "!**/components.d.ts",
+      "!**/auto-imports.d.ts",
+      "!**/volt",
+      "!**/*.vue",
+      "!.agents",
+      "!.claude",
+      "!scripts",
+      "!**/scripts",
+      "!**/script"
+    ]
+  },
+  "linter": {
+    "rules": {
+      //  性能规则
+      "performance": {
+        "noBarrelFile": "off",
+        "noNamespaceImport": "off",
+        //  正则表达式规则
+        "useTopLevelRegex": "off"
+      },
+      "a11y": "off",
+      "complexity": "off",
+      //   可疑规则
+      "suspicious": "off",
+      //  新特性规则
+      "nursery": {
+        "noShadow": "off",
+        "noIncrementDecrement": "off",
+        "noSyncScripts": "off",
+        "noLeakedRender": "off",
+        "noUndeclaredEnvVars": "off"
+      },
+      "style": {
+        "useThrowNewError": "off",
+        "useDefaultSwitchClause": "off",
+        "noMagicNumbers": "off",
+        "useFilenamingConvention": "off",
+        "noNonNullAssertion": "off",
+        "useBlockStatements": "off",
+        "noNestedTernary": "off",
+        "useConsistentTypeDefinitions": "off",
+        "noParameterProperties": "off",
+        "useConsistentMemberAccessibility": "off",
+        "useImportType": "off",
+        "useCollapsedElseIf": "off"
+      },
+      // 正确性规则
+      "correctness": "off"
+    }
+  },
+  "json": {
+    "parser": {
+      "allowComments": true, // 确保这是开启的
+      "allowTrailingCommas": true
+    },
+    "formatter": {
+      "enabled": true
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.svelte", "**/*.astro", "**/*.vue"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useConst": "off",
+            "useImportType": "off"
+          },
+          "correctness": {
+            "noUnusedVariables": "off",
+            "noUnusedImports": "off"
+          }
+        }
+      }
+    }
+  ]
 }
